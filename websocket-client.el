@@ -141,7 +141,7 @@ BUF is the websocket-client buffer for WS."
 (defun wsc-on-message (ws frame)
   "Called when WS receives FRAME."
   (wsc-insert-output ws "\n" (wsc-header t)
-                     "\n" (websocket-frame-payload frame)))
+                     "\n" (websocket-frame-text frame)))
 
 (defun wsc-on-close (ws)
   "Called when WS is closed by peer."
